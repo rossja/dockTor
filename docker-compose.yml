@@ -1,0 +1,10 @@
+version: "3"
+services:
+  tor:
+    image: docktor:latest
+    hostname: docktor
+    ports:
+      - "8118:8118"
+      - "9050:9050"
+    build: .
+
