@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM rossja/docktor
 
 EXPOSE 8118 9050
 
