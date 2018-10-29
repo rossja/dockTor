@@ -1,8 +1,9 @@
-FROM rossja/docktor
+FROM rossja/docktor:latest
 
 EXPOSE 8118 9050
 
-RUN echo '@testing http://nl.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories && \
+RUN apk add --upgrade apk-tools@edge && \
+    echo '@testing http://nl.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories && \
     apk update && \
     apk add privoxy tor@testing runit@testing
 
